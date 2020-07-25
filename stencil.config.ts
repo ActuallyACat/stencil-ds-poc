@@ -20,7 +20,7 @@ export const config: Config = {
   plugins: [
     sass()
   ],
-  excludeSrc: [
+  exclude: [
     '/test/',
     '**/*.spec.*',
     '**/*.e2e.*',

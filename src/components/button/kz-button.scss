@@ -1,0 +1,52 @@
+@import "../../../node_modules/@kaizen/design-tokens/sass/color.scss";
+@import "../../../node_modules/@kaizen/design-tokens/sass/typography.scss";
+@import "../../../node_modules/@kaizen/design-tokens/sass/border.scss";
+
+$ca-grid: 1.5rem;
+$button-height: $ca-grid * 2;
+
+.wrapper { 
+  border: 0;
+  font-family: $kz-typography-button-primary-font-family;
+  font-weight: $kz-typography-button-primary-font-weight;
+  font-size: $kz-typography-button-primary-font-size;
+  line-height: $kz-typography-button-primary-line-height;
+  letter-spacing: $kz-typography-button-primary-letter-spacing;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: $button-height;
+  border: $kz-border-solid-border-width $kz-border-solid-border-style;
+  border-radius: $kz-border-solid-border-radius;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  text-align: center;
+  overflow: visible; // Required for the focus ring on IE11
+}
+
+.default {
+  background: $kz-color-white;
+  color: $kz-color-wisteria-800;
+
+  &:hover, &:active { 
+    background: $kz-color-wisteria-100;
+    border-color: $kz-color-wisteria-700;
+  }
+}
+
+.primary { 
+  background: $kz-color-cluny-500;
+  border-color: $kz-color-cluny-500;
+  color: $kz-color-white;
+
+  &:hover, &:active { 
+    background: $kz-color-cluny-600;
+    border-color: $kz-color-cluny-600;
+  }
+}
+
+.fullwidth { 
+  width: 100%;
+}

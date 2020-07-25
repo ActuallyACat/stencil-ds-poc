@@ -6,56 +6,38 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface KzButton {
+        "isFullWidth": boolean;
+        "label": string;
+        "variant": "primary" | "default";
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLKzButtonElement extends Components.KzButton, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLKzButtonElement: {
+        prototype: HTMLKzButtonElement;
+        new (): HTMLKzButtonElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "kz-button": HTMLKzButtonElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface KzButton {
+        "isFullWidth"?: boolean;
+        "label"?: string;
+        "variant"?: "primary" | "default";
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "kz-button": KzButton;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "kz-button": LocalJSX.KzButton & JSXBase.HTMLAttributes<HTMLKzButtonElement>;
         }
     }
 }
