@@ -27,16 +27,16 @@ export class KzButton {
 
   render() {
     return (
-        <button class={classname(
-          "wrapper",
-          {
-            'fullwidth': this.isFullWidth,
-            'default': this.variant === "default",
-            'primary': this.variant === "primary"
-          }
-        )}>
-          <span>{this.label}</span>
-        </button>
+      <button class={classname(
+        "wrapper",
+        {
+          'fullwidth': this.isFullWidth,
+          'default': this.variant === "default",
+          'primary': this.variant === "primary"
+        }
+      )}>
+        <span>{this.label}</span>
+      </button>
     )
   }
 }

@@ -3,25 +3,21 @@ export default {
 }
 
 export const defaultComponent = () => {
-	let myComponent = document.createElement('kz-button')
-	myComponent.label = 'example';
-
-	return myComponent
-}
-
-export const primaryComponent = () => {
-	let myComponent = document.createElement('kz-button')
-	myComponent.label = 'example';
-	myComponent.variant = 'primary'
-
-	return myComponent
+	return `
+		<kz-button label="example"></kz-button>
+	`
 }
 
 export const fullwidthComponent = () => {
-	let myComponent = document.createElement('kz-button')
-	myComponent.isFullWidth = true;
-	myComponent.label = 'example';
-
-	return myComponent
+	return `
+		<kz-button label="example" is-full-width="true"></kz-button>
+	`
 }
+
+export const primaryComponent = () => {
+	return `
+		<kz-button label="example" variant="primary"></kz-button>
+	`
+}
+
 
