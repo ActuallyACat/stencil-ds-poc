@@ -7,22 +7,32 @@ import classname from 'classnames'
   shadow: true
 })
 export class KzButton {
-  @Prop() variant: "primary" | "default";
+  /**
+   * The variant of the button
+   * @default "default"
+   */
+  @Prop() variant: "primary" | "default" = "default"
 
-  @Prop() isFullWidth: boolean;
+  /**
+   * Sets width to be 100% of the parent container
+   * @default false
+   */
+  @Prop() isFullWidth: boolean = false
 
-  @Prop() label: string;
+  /**
+   * The content of the button
+   * @default ""
+   */
+  @Prop() label: string = ""
 
   render() {
-    const variant = this.variant || "default"
-    
     return (
         <button class={classname(
           "wrapper",
           {
             'fullwidth': this.isFullWidth,
-            'default': variant === "default",
-            'primary': variant === "primary"
+            'default': this.variant === "default",
+            'primary': this.variant === "primary"
           }
         )}>
           <span>{this.label}</span>

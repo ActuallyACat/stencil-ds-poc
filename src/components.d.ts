@@ -7,8 +7,20 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface KzButton {
+        /**
+          * Sets width to be 100% of the parent container
+          * @default false
+         */
         "isFullWidth": boolean;
+        /**
+          * The content of the button
+          * @default ""
+         */
         "label": string;
+        /**
+          * The variant of the button
+          * @default "default"
+         */
         "variant": "primary" | "default";
     }
 }
@@ -25,8 +37,20 @@ declare global {
 }
 declare namespace LocalJSX {
     interface KzButton {
+        /**
+          * Sets width to be 100% of the parent container
+          * @default false
+         */
         "isFullWidth"?: boolean;
+        /**
+          * The content of the button
+          * @default ""
+         */
         "label"?: string;
+        /**
+          * The variant of the button
+          * @default "default"
+         */
         "variant"?: "primary" | "default";
     }
     interface IntrinsicElements {
