@@ -1,5 +1,6 @@
 import { Component, Prop, h } from '@stencil/core';
 import classname from 'classnames'
+import { JSXBase } from '@stencil/core/internal';
 
 @Component({
   tag: 'kz-button',
@@ -17,15 +18,15 @@ export class KzButton {
    * Sets width to be 100% of the parent container
    * @default false
    */
-  @Prop() isFullWidth: boolean = false
+  @Prop() isFullWidth: false
 
   /**
    * The content of the button
    * @default ""
    */
-  @Prop() label: string = ""
+  @Prop() label: ""
 
-  render() {
+  render(): JSXBase.IntrinsicElements {
     return (
       <button class={classname(
         "wrapper",

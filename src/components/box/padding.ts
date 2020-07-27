@@ -50,7 +50,7 @@ export const py = (unit: GridFractions): string[] => [
   `pb-${convertFractionToString(unit)}`,
 ];
 
-export const p = (unit: GridFractions) => {
+export const p = (unit: GridFractions): string[] => {
   const classes: string[] = []
   
   if (typeof unit === "number") {
@@ -81,8 +81,6 @@ export const paddingClasses = ({
   if (paddingXAxis !== undefined) classes.push(...px(paddingXAxis))
   if (paddingYAxis !== undefined) classes.push(...py(paddingYAxis))
 
-  console.log(classes);
-  
   // if no padding defined on any param, default to 0
   if (
     padding === undefined &&

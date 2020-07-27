@@ -11,43 +11,43 @@ export namespace Components {
         /**
           * padding
          */
-        "p": GridFractions;
+        "p"?: GridFractions;
         /**
           * padding bottom
          */
-        "pb": GridFractions;
+        "pb"?: GridFractions;
         /**
           * padding left
          */
-        "pl": GridFractions;
+        "pl"?: GridFractions;
         /**
           * padding right
          */
-        "pr": GridFractions;
+        "pr"?: GridFractions;
         /**
           * padding top
          */
-        "pt": GridFractions;
+        "pt"?: GridFractions;
         /**
           * padding about the x-axis - padding left and right
          */
-        "px": GridFractions;
+        "px"?: GridFractions;
         /**
           * padding about the y-axis - padding top and bottom
          */
-        "py": GridFractions;
+        "py"?: GridFractions;
     }
     interface KzButton {
         /**
           * Sets width to be 100% of the parent container
           * @default false
          */
-        "isFullWidth": boolean;
+        "isFullWidth": false;
         /**
           * The content of the button
           * @default ""
          */
-        "label": string;
+        "label": "";
         /**
           * The variant of the button
           * @default "default"
@@ -109,12 +109,12 @@ declare namespace LocalJSX {
           * Sets width to be 100% of the parent container
           * @default false
          */
-        "isFullWidth"?: boolean;
+        "isFullWidth"?: false;
         /**
           * The content of the button
           * @default ""
          */
-        "label"?: string;
+        "label"?: "";
         /**
           * The variant of the button
           * @default "default"

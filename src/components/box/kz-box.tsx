@@ -1,5 +1,6 @@
 import { Component, Prop, h } from '@stencil/core';
 import { paddingClasses } from './padding'
+import { JSXBase } from '@stencil/core/internal';
 
 export type GridFractions =
   | 0
@@ -25,33 +26,33 @@ export class Kzbox {
   /**
    * padding
    */
-  @Prop() p: GridFractions
+  @Prop() p?: GridFractions
   /**
    * padding top
    */
-  @Prop() pt: GridFractions
+  @Prop() pt?: GridFractions
   /**
    * padding right
    */
-  @Prop() pr: GridFractions
+  @Prop() pr?: GridFractions
   /**
    * padding bottom
    */
-  @Prop() pb: GridFractions
+  @Prop() pb?: GridFractions
   /**
    * padding left
    */
-  @Prop() pl: GridFractions
+  @Prop() pl?: GridFractions
   /**
    * padding about the x-axis - padding left and right
    */
-  @Prop() px: GridFractions
+  @Prop() px?: GridFractions
   /**
    * padding about the y-axis - padding top and bottom
    */
-  @Prop() py: GridFractions
+  @Prop() py?: GridFractions
 
-  render() {
+  render(): JSXBase.IntrinsicElements {
     const classes = paddingClasses({
       p: this.p,
       pt: this.pt,
@@ -64,7 +65,6 @@ export class Kzbox {
     
     return (
       <div class={classes}>
-        <h1>fssddfs</h1>
         <slot></slot>
       </div>
     )
